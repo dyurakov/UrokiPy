@@ -3,10 +3,9 @@
 #  Напечатайте среднее арифметическое введенных чисел. Воспользуйтесь функциями sum и len.
 
 
-#tes=set(map(int, input().split()))
+# tes=set(map(int, input().split()))
 
-tes = {4, 7, 6, 23}
+tes = {4, 7, 6, 23, 65, 89}
 
-sr_znach = sum(tes)/len(tes)
-
-print(sr_znach)
+sr = sum(tes)/len(tes)
+print(sr)

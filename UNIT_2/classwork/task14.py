@@ -6,23 +6,40 @@
 
 
 
-lst = [1, 20, 3, 5, 4.4, 11, 0]
+lst = [-10000, -20000, 3, 0, -100, 5, 10, -5000, -2000]
+global save
 
-def find_min(lst):
-
-    for i in range(len(lst) - 1):
-        if lst[i] > lst[i+1]:
-            save = lst[i]
-
-            print(lst[i])
+def min_znach(list):
+    list.sort()
+    return list[0]
+print(f'Минимальный элемент по функции sort: {min_znach(lst)}')
 
 
+def find_min(list):
+    i = 0
+    vozmojno_min = []
+
+
+    for j in range(len(list)):
+        if list[i] < list[j]:
+            vozmojno_min = vozmojno_min + [list[i]]
+            i += 1
+
+
+    if len(vozmojno_min) == 1:
+        #print(vozmojno_min[0])
+        save = vozmojno_min[0]
+        return save
+
+    else:
+        return find_min(vozmojno_min)
+        """
+            Эта функция не работает корректно, потому что в случае, когда вызывается функция find_min(vozmojno_min) 
+            внутри самой себя, её результат не возвращается во внешний вызов рекурсии.
+            Чтобы исправить эту проблему, в строке find_min(vozmojno_min) нужно добавить оператор return перед вызовом функции:
+        """
 
 
 
+print(f'Минимальный элемент по функции перебора: {find_min(lst)}')
 
-
-
-
-
-print(find_min(lst))

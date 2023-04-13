@@ -5,22 +5,21 @@
 
 cortej = (123, 234, 345, 456, 567, 678, 789, 890)
 
-'''
-print( 'Введите число болше 0')
+# '''
+# Получаем число от пользователя с проверкой
+print('Введите число больше 0')
 while True:
-    chislo = float(input('input --> '))
+    chislo = int(input('input --> '))
     if chislo > 0:
         break
     else:
         print('Число должно быть больше 0!')
         continue
-'''
-
-
-chislo = 54
+# '''
+# chislo = 54
 
 
 new_cortej = cortej[:] + (chislo,)
 
 print(f'Старый кортеж: {cortej}')
-print(f'Новый кортеж: {tuple(sorted(new_cortej )) }')
+print(f'Новый кортеж: {tuple(sorted(new_cortej))}')
