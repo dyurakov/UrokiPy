@@ -25,7 +25,7 @@ slovar = []
 dlina = []
 for i in range(len(probel) - 1):
     # print(i)
-    slovo = str[probel[i]:probel[i + 1]]
+    slovo = str_[probel[i]:probel[i + 1]]
     slovar.append(slovo.replace(' ', ''))
     dlina.append(len(slovo.replace(' ', '')))
 
