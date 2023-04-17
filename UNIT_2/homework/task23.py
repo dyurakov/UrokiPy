@@ -7,7 +7,7 @@ spisok = [[1, 5, 3, 0], [2, 44, 1, 4], [3, 10, 5, 9], [5], [1, 3]]
 
 for i in range(len(spisok)):
     spisok[i].sort(reverse=True)
-spisok.sort(key = len)
+spisok.sort(key=len)
 
 print(spisok)
 
