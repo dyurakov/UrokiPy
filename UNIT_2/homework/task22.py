@@ -11,23 +11,14 @@
 #en_stroka = sorted(stroka)
 n = 1
 
-
+# Функция для сдвига значений листа вправо
 def shift_string(string, n):
     new_string = []
     # new_string = string[-n::] + string[0:-n]
     new_string = string[n::] + string[0:n]
-
-    #for i in range(len(string)):
-    #    new_string[i] = string[i+n]
-
-    # print(new_string)
     return new_string
 
-
-# print(shift_string(en_stroka,n))
-
-    # for i in range(len(string))
-
+# Функция формирования словаря по значениям
 def create_slovar(keys,value):
     slovar_caesar = {}
     for i in range(len(keys)):
@@ -68,7 +59,7 @@ def code(string, n):
     print(f'String encode Caesar> {string_input}')
 
 
-code('But what if the list contains both string and integer as its element. In those cases, above code won’t work.', n)
+code('Ave Mariya!', n)
 
 
 
