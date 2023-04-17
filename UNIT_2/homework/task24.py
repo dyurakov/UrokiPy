@@ -4,3 +4,29 @@
 # Пример ввода:
 # Война и мир, Над пропастью во ржи, Мастер и Маргарита, Идиот
 # Евгений Онегин, Идиот, Мастер и Маргарита, Война и мир
+
+
+book_1 = 'Война и мир, Над пропастью во ржи, Мастер и Маргарита, Идиот'
+book_2 = 'Евгений Онегин, Идиот, Мастер и Маргарита, Война и мир'
+#book_2 = ''
+
+# book_1 = set(book_1.split(','))
+# book_2 = set(book_2.split(','))
+
+book_1 = book_1.split(', ')
+book_2 = book_2.split(', ')
+
+# print(book_1)
+# print(book_2)
+
+obchie = []
+for i in range(len(book_1)):
+    if book_1[i] in book_2:
+        obchie.append(book_1[i])
+
+
+len_book_1 = len(book_1)
+len_book_2 = len(book_2)
+
+sum_book = len(book_1) + len(book_2) - len(obchie)
+print(f'Ученики прочитали столько книг: {sum_book}')
