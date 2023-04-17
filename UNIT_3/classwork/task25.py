@@ -1,11 +1,10 @@
-# todo:
+#
 #  Функция print_given()
 #  Реализуйте функцию print_given(), которая принимает произвольное количество позиционных и именованных аргументов
 #  и выводит все переданные аргументы, указывая тип каждого. Пары аргумент-тип должны выводиться каждая на отдельной строке,
 #  в следующем формате:
 #     для позиционных аргументов:
 #     <значение аргумента> <тип аргумента>
-#
 #     для именованных аргументов:
 #     <имя переменной> <значение аргумента> <тип аргумента>
 #
@@ -29,3 +28,17 @@
 #     b 2 <class 'int'>
 #     c 3 <class 'int'>
 #     d 4 <class 'int'>
+
+
+def print_given(*args, **kwargs):
+    print('Output:')
+    for i in range(len(args)):
+        print(f'{args[i]} {type(args[i])}')
+    kwargs = sorted(list(kwargs.items()))
+    for i in range(len(kwargs)):
+        print(f'{kwargs[i][0]} {kwargs[i][1]} {type(kwargs[i][1])}')
+
+
+
+
+print_given(1, [1, 2, 3], 'three', two=2, dfvfd='njlkn')

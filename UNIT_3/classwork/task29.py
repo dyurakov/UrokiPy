@@ -1,4 +1,4 @@
-#todo:
+#
 #  Реализуйте функцию convert(), которая принимает один аргумент:
 #  number — целое число
 #  Функция должна возвращать кортеж из трех элементов, расположенных в следующем порядке:
@@ -8,3 +8,29 @@
 #  Примечание 1. В задаче удобно воспользоваться функциями bin(), oct() и hex().
 #  Задачу решить доступным способом
 #  Задачу решить с помощью применения функции map и lambda
+
+number = 4
+
+def conver(number):
+
+    cb = str(bin(number))[2::]
+    co = str(oct(number))[2::]
+    ch = str(hex(number))[2::]
+    convert = (cb, co, ch)
+
+    return convert
+
+
+def converting(number):
+
+    cb = bin(number)
+    co = oct(number)
+    ch = hex(number)
+    convert = (cb, co, ch)
+    convert = list(map(lambda x: str(x)[2::], convert ))
+
+    return convert
+
+
+
+print(converting(number))
