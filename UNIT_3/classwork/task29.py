@@ -23,11 +23,10 @@ def conver(number):
 
 def converting(number):
 
-    cb = bin(number)
-    co = oct(number)
-    ch = hex(number)
-    convert = (cb, co, ch)
-    convert = list(map(lambda x: str(x)[2::], convert ))
+
+
+    convert = (bin, oct, hex)
+    convert = list(map(lambda fn: fn(x)[2::], convert ))
 
     return convert
 
