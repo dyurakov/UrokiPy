@@ -1,4 +1,4 @@
-#todo: Реализовать декоратор в котором нужно подсчитать кол-во вызовов декорированной функции в процессе выполнения кода.
+# Реализовать декоратор в котором нужно подсчитать кол-во вызовов декорированной функции в процессе выполнения кода.
 # Выгрузить статистику подсчета в файл debug.log в формате: Название функции, кол-во вызовов, дата-время последнего выполнения
 # Пример:
 # render, 10,  12.05.2022 12:00
@@ -22,7 +22,7 @@ logging.basicConfig(level=logging.INFO, filename="task37.log", filemode="w", for
 def decorator_render(func):
     global sch, slovar
 
-    print(func.__name__ in slovar)
+    #print(func.__name__ in slovar)
 
     if (func.__name__ in slovar) == True:
 
@@ -42,7 +42,7 @@ def decorator_render(func):
 
 for _ in range(5):
     @decorator_render
-    def render(text):
+    def render(text,a):
         return print(text.upper())
 
 for _ in range(7):
